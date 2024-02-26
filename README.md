@@ -1,5 +1,4 @@
-a login system.
-valid usernames and its passwords
+a login system. validates usernames and their passwords
 
 1 {
   username: manoel gomes
