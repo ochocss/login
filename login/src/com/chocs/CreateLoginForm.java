@@ -9,7 +9,8 @@ class CreateLoginForm extends JFrame implements ActionListener {
     JButton button;
     JPanel newPanel;
     JLabel userLabel, passLabel;
-    JTextField textField1, textField2;
+    JTextField textField1;
+    JPasswordField textField2;
 
     CreateLoginForm() {
         userLabel = new JLabel();
@@ -20,7 +21,7 @@ class CreateLoginForm extends JFrame implements ActionListener {
         passLabel = new JLabel();
         passLabel.setText("Password");
 
-        textField2 = new JTextField(15); // password
+        textField2 = new JPasswordField(15); // password
 
         button = new JButton("Submit");
 
@@ -41,7 +42,7 @@ class CreateLoginForm extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         String userValue = textField1.getText(); //get username
-        String passValue = textField2.getText(); //get password
+        String passValue = String.valueOf(textField2.getPassword()); //get password
 
         if (loginVerify(userValue, passValue)) {
             NewPage page = new NewPage();
