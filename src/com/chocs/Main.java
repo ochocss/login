@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            CreateLoginForm form = new CreateLoginForm();
+            LoginForm form = new LoginForm();
             form.setSize(400,200);
             form.setVisible(true);
         }

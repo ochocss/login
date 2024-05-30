@@ -6,10 +6,14 @@ import javax.swing.*;
 class NewPage extends JFrame
 {
     //constructor
-    NewPage()
+    NewPage(String username)
     {
+        setVisible(true);
         setTitle("Welcome");
         setSize(400, 100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JLabel welcomeLabel = new JLabel("Welcome " + username);
+        add(welcomeLabel);
     }
 }
